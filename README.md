@@ -374,6 +374,7 @@ Message, User, GroupChat and implement an authentication layer to protect resour
 - Implement Cashing for quick responses (Possible technologies: Spring Boot cashing)
 - If the model is more than one entity, it's better to make this REST API more mature by implementing HATEOAS links to make it an explorable API (Big debate about if we can even consider an API REST without following HATEOAS ☺️)
 - Implement sorting and pagination for the GET-List endpoint
+- Containerize the app with Docker and use Kubernetes for orchestration
  
 
 
