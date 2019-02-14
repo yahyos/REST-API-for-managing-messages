@@ -48,6 +48,16 @@ Note: Locally, an H2 in-memory is used as a data storage solution.
 
 Now, you can access the application in `localhost:5000/api/messages`
 
+###### Using Docker to run the API
+Open a terminal, navigate to root folder (where Dockerfile exits) and run the following commands:
+  - `docker build -t qlik/messagingservice .`  
+  - `docker run -p 5000:5000 qlik/messagingservice`
+  
+Now, you can access the application in `<docker_machine_ip_address>:5000/api/messages` .
+
+For more information about how to setup docker environment, please visit this  [official documentation page](https://docs.docker.com/get-started/)
+
+
 #### Note
 The application uses an H2 in-memory database by default. if you want to run your app against a MySQL db, please add the following code to the application.properties file in the following path `src\main\resources\application.properties` :
 ```
@@ -374,7 +384,7 @@ Message, User, GroupChat and implement an authentication layer to protect resour
 - Implement Cashing for quick responses (Possible technologies: Spring Boot cashing)
 - If the model is more than one entity, it's better to make this REST API more mature by implementing HATEOAS links to make it an explorable API (Big debate about if we can even consider an API REST without following HATEOAS ☺️)
 - Implement sorting and pagination for the GET-List endpoint
-- Containerize the app with Docker and use Kubernetes for orchestration
+- Use Kubernetes for orchestration
  
 
 
